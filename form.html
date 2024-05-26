@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+  
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <div class="container">
+      
+        <div class="center" id="signup-form">
+            <div class="header">
+                <h2>User Signup</h2>
+            </div>
+            <div class="icon">
+              
+                <i class='bx bxs-user'></i>
+            </div>
+            <form name="signupForm">
+                <div class="inputs">
+                    <div class="input-with-icon">
+                        <input type="text" name="username" placeholder="Enter Your Name" id="name" required>
+                       
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-with-icon">
+                        <input type="text" name="email" placeholder="Email" id="email" required>
+                     
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <span id="signup-error"></span>
+                    <div class="input-with-icon">
+                        <input type="password" placeholder="Password" name="password" id="pass" required>
+                       
+                        <i class='bx bx-lock-alt'></i>
+                    </div>
+                    <span id="signup-pass-error"></span>
+                </div>
+                <button type="button" onclick="handleSignup()" id="signup-button">Signup</button>
+            </form>
+            <div class="radios">
+                <div>
+                    <input type="checkbox"><span>Remember Me</span>
+                </div>
+                <div>
+                    <span>Already have an account? <a href="#" onclick="showLoginForm()" id="idlogin">login</a></span>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="center" id="login-form" style="display: none;">
+            <div class="header">
+                <h2>User Login</h2>
+            </div>
+            <div class="icon">
+              
+                <i class='bx bxs-user'></i>
+            </div>
+            <form name="signupForm">
+                <div class="inputs">
+                    <div class="input-with-icon">
+                        <input type="text" name="email" placeholder="Email" id="login_email">
+                      
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <span id="signup-error"></span>
+                    <div class="input-with-icon">
+                        <input type="password" placeholder="Password" name="password" id="login_password">
+                    
+                        <i class='bx bx-lock-alt'></i>
+                    </div>
+                    <span id="signup-pass-error"></span>
+                </div>
+                <button type="button" onclick="handlelogin()" id="login">Login</button>
+            </form>
+            <div class="radios">
+                <div>
+                    <input type="checkbox"><span>Remember Me</span>
+                </div>
+                <div>
+                    <span>Don't have an account? <a href="#" onclick="showsignupForm()" id="idsignin">Signup</a></span>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./modules/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>
